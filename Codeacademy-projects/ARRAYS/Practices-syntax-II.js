@@ -1,3 +1,4 @@
+// Use .forEach() array method:
 const veggies = ['broccoli', 'spinach', 'cauliflower', 'broccoflower'];
 
 const politelyDecline = (veg) => {
@@ -18,7 +19,7 @@ acceptEverything(veggies);
 /*
 ==========================================================================
 */
-
+// Use .map() array method:
 const numbers = [2, 7, 9, 171, 52, 33, 14]
 
 const toSquare = num => num * num
@@ -33,6 +34,7 @@ console.log(squareNums(numbers));
 ==========================================================================
 */
 
+// Use .filter() array method:
 const justCoolStuff = (arr1, arr2) => {
   return arr1.filter( e => arr2.includes(e));
 }
@@ -47,3 +49,12 @@ console.log(justCoolStuff(myStuff, coolStuff))
 ==========================================================================
 */
 
+// Use .every() array method:
+const isTheDinnerVegan = (food) => {
+  return food.every(e => e.source == "plant");
+}
+
+const dinner = [{name: 'hamburger', source: 'meat'}, {name: 'cheese', source: 'dairy'}, {name: 'ketchup', source:'plant'}, {name: 'bun', source: 'plant'}, {name: 'dessert twinkies', source:'unknown'}];
+
+console.log(isTheDinnerVegan(dinner))
+// Should print false
